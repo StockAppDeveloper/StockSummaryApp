@@ -21,7 +21,7 @@ public interface StockInfoMapper {
     @Mapping(target = "ipoDate", expression = "java(parseDate(record.get(\"ipoDate\")))")
     @Mapping(target = "delistingDate", expression = "java(parseDate(record.get(\"delistingDate\")))")
     @Mapping(target = "status", expression = "java(record.get(\"status\"))")
-    ChartDto.ListResponse toListResponse(Map<String, String> record);
+    StockInfoDto.ListResponse toListResponse(Map<String, String> record);
 
 
 
