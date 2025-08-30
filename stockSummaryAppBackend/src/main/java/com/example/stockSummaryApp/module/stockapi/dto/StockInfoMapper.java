@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.Map;
 
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE, imports = {LocalDate.class})
-public interface ChartMapper {
+public interface StockInfoMapper {
 
     default LocalDate parseDate(String date) {
         return date == null || date.isEmpty() || "null".equals(date) ? null : LocalDate.parse(date);

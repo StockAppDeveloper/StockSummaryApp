@@ -39,7 +39,7 @@ public class AlphaVantageAdapter implements ChartApiAdapter {
                 .build();
     }
 
-    public Flux<ChartDto.ListResponse> fetchInfo() {
+    public Flux<ChartDto.ListResponse> fetchInfos() {
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/query")
